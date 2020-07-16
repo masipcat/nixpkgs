@@ -15,12 +15,13 @@
 }:
 
 buildPythonPackage rec {
-  version = "1.4.2";
+  version = "1.5.7";
   pname = "pyglet";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "1dxxrl4nc7xh3aai1clgzvk48bvd35r7ksirsddz0mwhx7jmm8px";
+    extension = "zip";
+    sha256 = "03gl5wqblvhc2qlj4cq7bkz3cm0mi67nba3rrv5swij9sgdc5aiz";
   };
 
   # find_library doesn't reliably work with nix (https://github.com/NixOS/nixpkgs/issues/7307).
